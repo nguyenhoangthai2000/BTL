@@ -1,0 +1,53 @@
+header ul.menu {
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: ghostwhite;
+  z-index: 1;
+}
+header ul.menu li {
+  list-style: none;
+  display: inline-block;
+}
+header ul.menu a {
+  line-height: 25%;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+header .dropdown {
+  display: inline-block;
+  float: right;
+  padding: 20px 20px;
+}
+header .dropdown button {
+  border: none;
+  background-color: ghostwhite;
+  color: black;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+header .dropdown .dropdown-menu {
+  margin-top: 20px;
+  margin-right: 13px;
+}
+header .dropdown .dropdown-menu .dropdown-item {
+  text-align: right;
+  font-size: 16px;
+  color: black;
+}
+header ul.menu a:hover {
+  color: red;
+}
+header .dropdown button:hover {
+  color: red;
+}
+header .dropdown button:hover header .dropdown .dropdown-menu .dropdown-item {
+  color: red;
+}

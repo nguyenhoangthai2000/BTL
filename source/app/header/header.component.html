@@ -1,0 +1,33 @@
+<header>
+    <ul class="menu">
+        <li><a href=""><img src="http://dthomas-software.co.uk/wp-content/uploads/2016/01/onlinetraining_logo_main.png"
+                    width="200px" height="auto"></a></li>
+        <li><a routerLink="/gioithieu">giới thiệu</a></li>
+        <li><a routerLink="/lienhe">liên hệ</a></li>
+        <li><a routerLink="/gopy">góp ý</a></li>
+        <li><a routerLink="/hoi">hỏi đáp</a></li>
+        <li><a routerLink="/thi">danh sách môn học</a></li>
+        <div class="dropdown">
+            <li *ngIf="checkUser"> 
+                <a href="">ssss</a>
+            </li>
+            <button *ngIf="!checkUser" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tài Khoản
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" routerLink="/dangky">đăng ký</a>
+                <a class="dropdown-item" routerLink="/dangnhap">đăng nhập</a>
+                <a class="dropdown-item" routerLink="/quenmatkhau">quên mật khẩu</a>
+                <hr>
+                <a class="dropdown-item" routerLink="/">đăng xuất</a>
+                <a class="dropdown-item" routerLink="/doimatkhau">đổi mật khẩu</a>
+                <a class="dropdown-item" routerLink="/taikhoan">cập nhật tài khoản</a>
+            </div>
+        </div>
+    </ul>
+    <div class="banner" style="margin-top: 80px;">
+        <img src="https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/sites/13098/images/7ZapNrXRTJGIO05iTZ4Y_online_training_photo_background.png"
+            alt="Chưa hiện ảnh" width="100%" height="400px">
+    </div>
+</header>

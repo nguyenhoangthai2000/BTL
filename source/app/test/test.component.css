@@ -1,99 +1,60 @@
-header .row{
-    margin-top: 10px;
-    margin-left: 10px;
+
+section #card-head {
+  border: none;
 }
-header .card{
-    margin-top: 20px;
+section .head {
+  margin: 0px;
+  padding: 10px 0px;
 }
-header .card-body img{
-    margin-left: 50px;
+section .card-body button {
+  background-color: white;
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0px 20px;
+  border: 1px solid blue;
 }
-header .theme{
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
+section .head p {
+  margin: 0px 20px;
 }
-header .list-group a{
-    text-decoration: none;
-    color: #000;
+section .card-body button:hover {
+  transition: all 0.5s ease-out;
+  border: 1px solid red;
+  color: red;
 }
-header .col-sm {
-    margin-right: 20px;
+section .center {
+  padding: 0px;
+  margin: 0px;
 }
-header .card-header a{
-    text-decoration: none;
+section .card {
+  margin: 20px 0px;
 }
-header .icon i{
-    font-size: 25px;
-    margin: 10px;
-    position: relative;
-    left: 25%;
-    bottom: 370px;
+section h1 {
+  text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5,
+    -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5,
+    -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+  color: ghostwhite;
+  font-weight: bold;
+  font-size: 2cm;
+  margin-bottom: 50px;
 }
-header .content input{
-    margin: 0px 10px;
+section .search p {
+  display: inline-block;
+  margin: 0px 10px;
+  font-size: 20px;
+  color: gray;
 }
-footer{
-    width: 100%;
-    height: 500px;
-    position: relative;
-    background: lightgray;
+section .col {
+  margin: 0px 20px;
 }
-footer .footer-name h1{
-    text-align: center;
-    color: black;
-    letter-spacing: 5px;
+section .search input {
+  padding: 10px 0px;
 }
-footer .footer-name .footer-name__littlename h3{
-    text-align: center;
-    color: black;
-    letter-spacing: 5px;
+section .table td a{
+  color: black;
 }
-footer .contact .col-sm h4{
-    color: black;
-    text-align: center;
-}
-footer .contact .col-sm a{
-    display: block;
-    color: black;
-    text-decoration: none;
-    font-size: 15px;
-}
-footer .contact .col-sm i{
-    margin-right: 10px;
-    margin-top: 10px;
-}
-footer .contact .col-sm p{
-    font-size: 35px;
-    font-weight: bold;
-    position: relative;
-    left: 13%;
-    bottom: 50px;
-}
-footer .contact .logo img{
-    margin: 5px;
-    margin-left: 30px;
-}
-/* Hover */
-header a.nav-link:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-header .list-group a:hover{
-    color: blue;
-    text-align: center;
-    font-weight: bold;
-}
-header .icon i:hover{
-    color: red;
-    transition: all 0.5s;
-    transform: rotate(360deg);
-}
-footer a.dropdown-item:hover{
-    font-weight: bold;
-    text-align: center;
-}
-footer .contact .col-sm a:hover{
-    color: blue;
-    font-weight: bold;
+section .table td a:hover{
+  text-decoration: none;
+  color: blue;
+  transition: all 0.5s ;
 }

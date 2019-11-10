@@ -1,0 +1,21 @@
+<section style="margin-top: 30px;">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 style="color: red;text-align: center;font-style: italic;">{{NameSubject}}</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <div
+                            *ngFor='let sub of listQuestion | paginate: { itemsPerPage: itemPerPage, currentPage: curPage};let i=index'>
+                            <h4 style="margin-bottom: 60px;">{{sub.Text}}</h4>
+                            <div *ngFor="let ques of sub.Answers" >
+                                <input type="radio" name="1">{{ques.Text}}<br>
+                            </div>
+                        </div>
+                    </div>
+                    <pagination-controls (pageChange)="curPage = $event"></pagination-controls>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

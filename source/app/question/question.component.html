@@ -1,23 +1,4 @@
-<header>
-    <div class="row">
-        <div class="col-sm">
-            <i class="fas fa-align-justify" style="margin-right: 5px;"></i>
-            <p>Các môn thi</p>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="..." aria-label="Search">
-            </form>
-        </div>
-        <div class="col-sm-2">
-            <a routerLink=''> <img
-                    src="http://dthomas-software.co.uk/wp-content/uploads/2016/01/onlinetraining_logo_main.png"
-                    width="250px" height="50px"></a>
-        </div>
-        <div class="col-sm bt">
-            <button type="button" class="btn btn" routerLink='/dangnhap'>Đăng Nhập</button>
-            <button type="button" class="btn btn-warning" routerLink='/dangky'>Đăng Ký</button>
-        </div>
-    </div>
-</header>
+
 
 <section>
     <div class="container">
@@ -131,97 +112,29 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <ul class="list-group" style="margin-top: 20px;">
-                    <a href="">
-                        <li class="list-group-item  theme" style="text-align: left"><i class="fas fa-align-justify"
-                                style="margin-right: 5px;"></i>DANH SÁCH CÁC MÔN</li>
-                    </a>
-                    <a routerLink='thi'>
-                        <li class="list-group-item">Lập trình Android nâng cao</li>
-                    </a>
-                    <a routerLink='thi'>
-                        <li class="list-group-item">Xây dựng trang web</li>
-                    </a>
-                    <a routerLink='thi'>
-                        <li class="list-group-item">Cơ sở dữ liệu</li>
-                    </a>
-                    <a routerLink='thi'>
-                        <li class="list-group-item">SQL server</li>
-                    </a>
-                    <a routerLink='thi'>
-                        <li class="list-group-item">Internet Marketing</li>
-                    </a>
-                    <a routerLink='thi'>
-                        <li class="list-group-item">Lập trình hướng đối tượng với Java</li>
-                    </a>
-                    <a routerLink='thi'>
-                        <li class="list-group-item">Lập trình PHP</li>
-                    </a>
-                    <a routerLink='thi'>
-                        <li class="list-group-item">Điện toán đám mây</li>
-                    </a>
-                    <a routerLink='thi'>
-                        <li class="list-group-item">Lập trình Android cơ bản</li>
-                    </a>
-                    <a routerLink='thi'>
-                        <li class="list-group-item">Lập trình game 2D</li>
-                    </a>
-                    <a routerLink='thi'>
-                        <li class="list-group-item">Thiết kế giao diện trên Android</li>
-                    </a>
-                    <a routerLink='thi'>
-                        <li class="list-group-item">Thiết kế web cho điện thoại di động</li>
-                    </a>
-                    <a routerLink='thi'>
-                        <li class="list-group-item">Lập trình ASP. NET</li>
-                    </a>
-                </ul>
+            <div class="col-sm-4" style="margin-top: 22px;">
+                <div class="search">
+                    <input type="text" size="42" placeholder=" Tìm theo tên môn học"
+                        [(ngModel)]="searchText" (input)="search()" style="padding: 10px;"> 
+                </div>
+                <table class="table table-bordered" style="margin-top: 22px;">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>AName</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let monhoc of employee |filter:searchText; let i = index">
+                            <td>{{i}}</td>
+                            <td><a [routerLink]="'/exam'">{{monhoc.name}}</a></td>
+                            <td><a [routerLink]="'/exam'">{{monhoc.AName}}</a></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </section>
 
-<footer style="margin-top: 30px;">
-        <div class="container">
-            <div class="footer-name">
-                <h1>ONLINE TRAINING</h1>
-                <div class="footer-name__littlename">
-                    <h3>ONLINE TRAINING "SỰ LỰA CHỌN HOÀN HẢO"</h3>
-                </div>
-            </div>
-            <div class="row contact" style="margin-top: 30px;">
-                <div class="col-sm">
-                    <h4>LIÊN HỆ</h4>
-                    <hr color="green;">
-                    <a href=""><i class="fas fa-map-marker-alt" style="color:white;"></i>12 Trịnh Đình Thảo, Tân Phú,
-                        TP.HCM</a>
-                    <a href=""><i class="fas fa-envelope" style="color:white;"></i>thainguyen3223@gmail.com</a>
-                    <a href=""><i class="fas fa-phone" style="color:white;"></i>1900 6933
-                    </a>
-                </div>
-                <div class="col-sm">
-                    <h4>VỀ CHÚNG TÔI</h4>
-                    <hr color="green;">
-                    <a href="">Điều khoản sử dụng</a>
-                    <a href="">Chính sách</a>
-                    <img src="assets/teampng.png" alt="#" width="100%;" height="150px;">
-                    <p>TEAM PNG</p>
-                </div>
-                <div class="col-sm">
-                    <h4>CHI NHÁNH</h4>
-                    <hr color="green;">
-                    <a href=""><i class="fas fa-map-marker-alt" style="color:white;"></i>208 Âu Cơ, Quận 11, Phường
-                        10</a>
-                    <a href=""><i class="fas fa-map-marker-alt" style="color:white;"></i>Địa chỉ: Tầng 4, Tòa nhà 25T2,
-                        Đường Nguyễn Thị Thập, Phường Trung Hoà, Quận Cầu Giấy, Hà Nội.</a>
-                </div>
-                <div class="col-sm logo">
-                    <h4>TẢI ỨNG DỤNG</h4>
-                    <hr color="green;">
-                    <img src="assets/footer-google-app.png" alt="">
-                    <img src="assets/footer-store-app.png" alt="">
-                </div>
-            </div>
-        </div>
-    </footer>
