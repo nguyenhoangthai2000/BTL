@@ -3,40 +3,49 @@
         <h1>KHÔI PHỤC MẬT KHẨU</h1>
         <p>Để học tập và giao lưu với hàng triệu học viên trên mọi miền đất nước.</p>
         <button type="button" class="btn btn-primary">SMS</button>
-        <button type="button" class="btn btn-primary">EMAIL</button>
+        <button type="button" class="btn btn-primary" style="background-color: aqua;">EMAIL</button>
         <button type="button" class="btn btn-primary">Hỗ trợ từ ONLINETRAINING</button>
         <hr color="blue">
         <div class="card">
             <div class="card-header" style="text-align: center;font-weight: bold;">
-                KHÔI PHỤC MẬT KHẨU QUA SMS
+                KHÔI PHỤC MẬT KHẨU QUA EMAIL
             </div>
             <div class="card-body">
-                <h5 class="card-title">Bạn vui lòng điền số điện thoại đã dùng để đăng ký tài khoản ONLINETRAINING</h5>
+                <h5 class="card-title">Bạn vui lòng nhập "Tên tài khoản" và "Email" để lấy lại mật khẩu</h5>
                 <div class="row">
-                    <div class="col-sm btn1">
+                    <div class="col-3">
                         <p style="color: black;">Tên tài khoản:</p>
+                    </div>
+                    <div class="col-sm">
                         <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" size="60" type="search" aria-label="Search" [(ngModel)]="listforget.username" name="listforget.username">
+                            <input class="form-control mr-sm-2" size="60" type="search" aria-label="Search"
+                                [(ngModel)]="listForget.username" name="listForget.username">
                         </form>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm">
+                    <div class="col-3">
                         <p style="color: black;">Email:</p>
+                    </div>
+                    <div class="col-sm">
                         <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" size="60" type="search" aria-label="Search" [(ngModel)]="listforget.email" name="listforget.email">
+                            <input class="form-control mr-sm-2" size="60" type="search" aria-label="Search"
+                                [(ngModel)]="listForget.email" name="listForget.email">
                         </form>
                     </div>
                 </div>
                 <div class="row" *ngIf="checkpass">
-                    <div class="col-sm" >
+                    <div class="col-3">
                         <p style="color: black;">Password:</p>
+                    </div>
+                    <div class="col-sm">
                         <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" size="60" type="search" aria-label="Search" [(ngModel)]="listforget.password" name="listforget.password">
+                            <input class="form-control mr-sm-2" size="60" type="search" aria-label="Search"
+                                [(ngModel)]="listForget.password" name="listForget.password">
                         </form>
                     </div>
                 </div>
-                <div class="btn">
+                <div class="btn2">
                     <a *ngIf="!checkpass" class="btn btn-primary" (click)="forgotstudent()">Lấy lại mật khẩu</a>
                     <a *ngIf="checkpass" class="btn btn-primary" routerLink='/dangnhap'>Quay về trang chủ</a>
                 </div>

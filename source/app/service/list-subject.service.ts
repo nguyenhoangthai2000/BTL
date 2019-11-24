@@ -1,64 +1,18 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListSubjectService {
 
-  constructor() { }
-  monhoc = [
-    {
-      study: "1. Thiết kế web cho điện thoại di động",
-    },
-    {
-      study: "2. Lập trình hướng đội tượng Java"
-    },
-    {
-      study: "3. Thiết kế giao diện trên Android"
-    },
-    {
-      study: "4. Lập trình Android nâng cao"
-    },
-    {
-      study: "5. Lập trình Android cơ bản"
-    },
-    {
-      study: "6. Quản lý dự án với Agile"
-    },
-    {
-      study: "7. Xây dựng trang web"
-    },
-    {
-      study: "8. Lập trình PHP"
-    },
-    {
-      study: "9. Điện toán đám mây"
-    },
-    {
-      study: "10. Internet Marketing"
-    },
-    {
-      study: "11.  Lập trình game 2D"
-    },
-    {
-      study: "12.  Cơ sở dữ liệu"
-    },
-    {
-      study: "13.  SQL Server"
-    },
-    {
-      study: "14.  Lập trình ASP.NET"
-    },
-    {
-      study: "15.  SUBJECT"
-    },
-    {
-      study: "16.  VBPR"
-    },
-    {
-      study: "17.  WEBU"
-    },
-  ]
+  constructor(private http: HttpClient) { }
+  
+  getSubjectFromData(): Observable<any>{
+    return this.http.get<any>(`./assets/db/Subjects.json`);
+  }
+
   subject =  [
     {
       "Id": "ADAV",

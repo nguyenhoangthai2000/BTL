@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ListUserService } from '../service/list-user.service';
 import { student } from '../student'
 import { HttpClient } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -11,10 +12,11 @@ import { HttpClient } from '@angular/common/http';
 export class SigninComponent implements OnInit {
 
   constructor(
-    private route:Router,
-    private _ListUser:ListUserService,
-    private http:HttpClient
-    ) { }
+    private router: Router,
+    private _ListUser: ListUserService,
+    private http: HttpClient,
+    private cookie: CookieService) { }
+
   students: student = {
     id: null,
     username: null,
@@ -24,27 +26,34 @@ export class SigninComponent implements OnInit {
     gender: null,
     birthday: null,
     address: null,
-    mark: null,
+    marks: null
   }
-  liststudents: any;
+  idStudent: any;
+  listStudents: any;
+
   ngOnInit() {
+
     this._ListUser.getstudent().subscribe(data => {
-      this.liststudents = data;
+      this.listStudents = data;
     });
   }
 
   getStudentFromInput() {
     let checkinfor = false;
-    this.liststudents.forEach(API => {
+    this.listStudents.forEach(API => {
       if (this.students.username === API.username && this.students.password === API.password) {
-        window.alert("Bạn đã đăng nhập thành công");
-        this.students.id = API.id;
-        this.route.navigate(['/home/',this.students.id]);
-        checkinfor = true;
+        if(this.students.id = API.id){
+          window.alert("Bạn đã đăng nhập thành công");                 
+          checkinfor = true;
+          this.cookie.set("id", `${this.students.id}`); 
+          this.router.navigate(['/alsjfl']);
+          // window.location.reload(true);        
+        }
       }
     });
     if (checkinfor == false) {
       window.alert("Bạn đã nhập sai tài khoản hoặc mật khẩu")
-    }
+    };
+    
   }
 }

@@ -1,0 +1,31 @@
+<header>
+    
+    <ul class="menu" *ngIf="!checkAcc">
+        <div class="dropdown">
+            <button  class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tài Khoản
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" routerLink="/dangky">đăng ký</a>
+                <a class="dropdown-item" (click)="inAccount()">đăng nhập</a>
+                <a class="dropdown-item" routerLink="/quenmatkhau">quên mật khẩu</a>
+            </div>
+        </div>
+    </ul>
+
+    <ul class="menu" *ngIf="checkAcc">
+        <div class="dropdown">
+            <button  class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="">{{nameStudent}}</a>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">               
+                <a href="" class="dropdown-item" (click)="outAccount()">đăng xuất</a>
+                <a class="dropdown-item" routerLink="/doimatkhau">đổi mật khẩu</a>
+                <a class="dropdown-item" routerLink="/taikhoan">cập nhật tài khoản</a>
+            </div>
+        </div>
+    </ul>
+    
+</header>

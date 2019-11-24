@@ -7,15 +7,38 @@
                     <div class="card-body">
                         <div
                             *ngFor='let sub of listQuestion | paginate: { itemsPerPage: itemPerPage, currentPage: curPage};let i=index'>
-                            <h4 style="margin-bottom: 60px;">{{sub.Text}}</h4>
-                            <div *ngFor="let ques of sub.Answers" >
-                                <input type="radio" name="1">{{ques.Text}}<br>
+                            <h4>{{sub.Text}}</h4>
+                            <div *ngFor="let ques of sub.Answers" class="input">
+                                <input type="radio" name="1" (click)="check(sub.Id,ques.Id)">{{ques.Text}}<br>
                             </div>
                         </div>
                     </div>
                     <pagination-controls (pageChange)="curPage = $event"></pagination-controls>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                        (click)="chamdiem()">NỘP BÀI</button>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Online Training</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h4 class="main">Chúc mừng : <span>{{nameStudent}}</span></h4>
+                <h5>Bạn đã hoàn thành xong bài thi!</h5>
+                <h6>{{point}}</h6>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="goHome()">Để sau</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -34,3 +34,21 @@ section .card-body .row .col-sm p {
 section .row .btn1 input {
   margin-left: 18px;
 }
+.btn2{
+  margin: 20px 0px;
+  text-align: center;
+  display: block;
+}
+.btn2 a{
+  display: inline;
+  color: white;
+  text-transform: uppercase;
+}
+.row{
+  margin: 20px 0px;
+}
+.row .col-3 p{
+  font-size: 18px;
+  text-align: left !important;
+  margin-left:50px;
+}

@@ -48,3 +48,7 @@ section .content textarea {
 .footer{
   text-align: center;
 }
+button a {
+  color: white;
+  text-decoration: none;
+}

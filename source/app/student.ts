@@ -7,6 +7,6 @@ export interface student{
     gender?:boolean,
     birthday?:string,
     schoolfee?:string,
-    mark?:number
+    marks?:any;
     address?:string,
 }

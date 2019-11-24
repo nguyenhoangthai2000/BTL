@@ -19,7 +19,7 @@ export class SignupComponent implements OnInit {
     gender: null,
     birthday: null,
     address: null,
-    mark: null,
+    marks: [],
   }
   liststudent: any;
 
@@ -51,9 +51,10 @@ export class SignupComponent implements OnInit {
       fullname:this.students.fullname,
       email:this.students.email,
       password:this.students.password,
+      marks:[]
     }
     this.http.post("https://cuong-dev1-api.herokuapp.com/studentsTwo",newstudent).subscribe(data =>{
-      this.route.navigate['/dangnhap'];
+      this.route.navigate(['/dangnhap']);
     });
   }
 }

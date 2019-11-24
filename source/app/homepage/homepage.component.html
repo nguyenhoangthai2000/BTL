@@ -1,37 +1,5 @@
-<nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-3">
-                <div class="user">
-                    <h3 *ngIf="!showName" style="margin: 0px;">Your Account</h3>
-                    <h3 *ngIf="showName" style="opacity: 0.5;">Tên đăng nhập</h3>
-                    <a *ngIf="showName" (click)="updateInforStudent()" >{{nameStudent}}</a>
-                </div>
-            </div>
-            <div class="col-9">
-                <p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fas fa-align-justify" style="margin-right: 10px;"></i> danh mục môn học
-                    </a>
-                </p>
-                <div class="collapse" id="collapseExample">
-                    <div class="card-body">
-                        <div class="row">
-                            <ul *ngFor="let monhocs of listmonhoc">
-                                <div class="col-2-md">
-                                    <li><a href="">{{monhocs.study}}</a></li>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<section>
+<section style="margin-top: 30px;">
+    <h1 style="text-align: center;">DANH SÁCH CÁC MÔN HỌC</h1>
     <div class="container">
         <div class="card">
             <div class="card-body text-center">
@@ -40,10 +8,11 @@
                         *ngFor="let p of listsubject |paginate: { itemsPerPage: itemsperpage, currentPage: currentpage }">
                         <div class="card">
                             <div class="card-body" id="col6">
-                                <img src="../../assets/logos/{{p.Logo}}">
+                                <img src="../../../assets/logos/{{p.Logo}}">
                                 <div class="card-header">
                                     <strong>
-                                        <a routerLink="" (click)="doSubject(p.Id)">{{p.Name}}</a>
+                                        <span><i class="far fa-hand-point-right"></i></span><a
+                                            (click)="showSubject(p.Id)" style="text-align: right;">{{p.Name}}</a>
                                     </strong>
                                 </div>
                             </div>
@@ -53,11 +22,11 @@
                 <div class="container-fluid">
                     <ul class="pagination">
                         <li class="page-item "><a class="page-link left" (click)="previouspage()">&lt;&lt;</a></li>
-                        <li class="page-item "><a class="page-link" (click)="pagenow(1)">1</a></li>
-                        <li class="page-item"><a class="page-link" (click)="pagenow(2)">2</a></li>
-                        <li class="page-item"><a class="page-link" (click)="pagenow(3)">3</a></li>
-                        <li class="page-item"><a class="page-link" (click)="pagenow(4)">4</a></li>
-                        <li class="page-item"><a class="page-link" (click)="pagenow(5)">5</a></li>
+                        <li class="page-item "><a class="page-link" (click)="pagenow(1)" id="btn">1</a></li>
+                        <li class="page-item"><a class="page-link" (click)="pagenow(2)" id="btn">2</a></li>
+                        <li class="page-item"><a class="page-link" (click)="pagenow(3)" id="btn">3</a></li>
+                        <li class="page-item"><a class="page-link" (click)="pagenow(4)" id="btn">4</a></li>
+                        <li class="page-item"><a class="page-link" (click)="pagenow(5)" id="btn">5</a></li>
                         <li class="page-item"><a class="page-link right" (click)="nextpage()">&gt;&gt;</a></li>
                     </ul>
                 </div>

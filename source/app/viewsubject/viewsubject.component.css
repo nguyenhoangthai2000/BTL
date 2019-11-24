@@ -1,0 +1,63 @@
+.card {
+  width: 70%;
+  box-shadow: 5px 5px 5px black, -5px -5px 5px lightgray;
+  border: 2px solid lightslategray;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 50px;
+}
+.card:hover{
+    transition: all 0.4s;
+    box-shadow: 5px 5px 5px lightgray, -5px -5px 5px black;
+}
+.card img {
+  display: inline-block;
+  margin: 50px;
+  width: 200px;
+  height: 200px;
+}
+.col{
+    margin-top: 50px;
+}
+span {
+  font-weight: normal;
+}
+.btn-exam {
+  text-align: center;
+}
+.btn-exam a {
+  margin: 10px 20px;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px 50px;
+}
+.btn-exam a:hover {
+  transition: all 0.4s ease-out;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 0px 15px gray;
+}
+.btn-exam a:active {
+  transform: translateY(5px);
+}
+.col li {
+  margin: 20px 0px;
+}
+.col h4,
+h5 {
+  margin: 0px 20px;
+}
+h1 {
+  text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5,
+    -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5,
+    -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+  color: lightgray;
+  font-size: 2cm;
+  margin: 20px 0px;
+}
+.row{
+    height: 500px;
+    border: 2px solid brown;
+    border-radius: 5px;
+}

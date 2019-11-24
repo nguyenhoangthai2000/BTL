@@ -10,3 +10,6 @@ section .container p {
 section .content .col-sm li {
   list-style-type: none;
 }
+li {
+  margin: 10px 0px;
+}

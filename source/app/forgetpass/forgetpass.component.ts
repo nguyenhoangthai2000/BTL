@@ -9,30 +9,36 @@ import { ListUserService } from '../service/list-user.service';
 export class ForgetpassComponent implements OnInit {
 
   constructor(private _ListUser: ListUserService) { }
-  liststudent: any;
+
+  listStudent: any;
   checkpass: boolean = false;
-  listforget = {
+  listForget = {
     username: null,
     password: null,
-    email: null,
+    email: null
   }
+
   ngOnInit() {
     this._ListUser.getstudent().subscribe(data => {
-      this.liststudent = data;
+      this.listStudent = data;
     });
   }
+
   forgotstudent() {
     let checkinfor: any;
-    this.liststudent.forEach(element => {
-      if (this.listforget.username == element.username && this.listforget.email == element.email) {
-        this.listforget.password = element.password;
-        checkinfor = false;
+    this._ListUser.getstudent().subscribe(data => {
+      this.listStudent = data;
+      this.listStudent.forEach(element => {
+        if (this.listForget.username == element.username && this.listForget.email == element.email) {
+          this.listForget.password = element.password;
+          checkinfor = false;
+        }
+      });
+      if (checkinfor == false) {
+        this.checkpass = true;
+      } else {
+        window.alert("Email hoặc tài khoản không đúng ")
       }
     });
-    if (checkinfor == false) {
-      this.checkpass = true;
-    } else {
-      window.alert("Email hoặc tài khoản không đúng ")
-    }
   }
 }

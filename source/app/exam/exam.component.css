@@ -5,6 +5,15 @@
   box-sizing: 5px 5px 5px black;
   box-shadow: 5px 5px 5px lightgray;
 }
-input[type="radio"] {
-  margin: 10px 20px;
+.btn{
+  border-radius: 10px;
+}
+pagination-controls{
+  text-align: center !important;
+}
+.input{
+  margin: 20px 10px !important;
+}
+.input input{
+  margin: 0px 10px;
 }

@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 *ngIf="!showtable" >tra cứu thông tin</h1>
+    <div class="row">
+        <div class="col-5">
+            <p id="email"  *ngIf="!showtable">Email:</p>
+            <input type="text"  *ngIf="!showtable" [(ngModel)]="student.email" name="student.email">
+            <p *ngIf="showtable">Tên đăng nhập: {{student.fullname}}</p>
+            <p *ngIf="showtable">Ngày sinh: {{student.birthday}}</p>
+        </div>
+        <div class="col-5">
+            <button *ngIf="!showtable" type="button" class="btn btn-success" (click)="chechAndView()">Xem điểm thi</button>
+        </div>
+    </div>
+    <h1 *ngIf="showtable">Bảng thông tin kết quả thi</h1>
+    <table class="table" *ngIf="showtable">
+        <thead>
+            <tr>
+                <th scope="col">STT</th> 
+                <th scope="col">Mã môn học</th>
+                <th scope="col">Tên môn học</th>
+                <th scope="col">Điểm thi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let item of student.marks'>
+                <th scope="row">1</th>
+                <td>{{item.Id}}</td>
+                <td>{{item.Name}}</td>
+                <td>{{item.mark}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

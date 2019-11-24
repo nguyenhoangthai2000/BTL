@@ -1,0 +1,11 @@
+.row {
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: ghostwhite;
+    z-index: 1;
+  }
+  

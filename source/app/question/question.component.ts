@@ -12,17 +12,9 @@ export class QuestionComponent implements OnInit {
   constructor(private _listSubject: ListSubjectService) { }
 
   ngOnInit() {
-    this.employee = this._listSubject.subject;
+    
   }
-  search() {
-    if (this.AName != "") {
-
-    } else if (this.AName == "") {
-      this.ngOnInit();
-    }
-    this.employee = this.employee.filter(res => {
-      return res.Name.toLocaleLowerCase().match(this.AName.toLocaleLowerCase());
-    })
-  }
+  
+  
 
 }

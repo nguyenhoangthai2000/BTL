@@ -1,32 +1,55 @@
-
-section .container .row {
-  margin-top: 10px;
-  margin-left: 10px;
+.col-8,
+.col-4 {
+  margin: 30px 0px;
 }
-section .card {
-  margin-top: 20px;
+.nav {
+  margin: 20px;
 }
-section .list-group a {
-  text-decoration: none;
-  color: #000;
+.nav li {
+  border-bottom: 2px solid black;
 }
-section .card-body {
-  padding: 0px !important;
-  margin: 5px 5px;
-}
-section h5 {
-  margin: 0px;
+.nav a {
+  margin: 5px 0px;
 }
 section .card-body .col-sm-2 {
   border-right: 1px solid black;
   padding: 0px 10px !important;
 }
-section .table td a{
+section .container .row {
+  margin-top: 50px;
+  margin-left: 40px;
+}
+h1 {
+  text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5,
+    -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5,
+    -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+  color: whitesmoke;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2cm;
+  margin: 30px 0px;
+}
+.col-4 a {
+  font-size: 20px;
+  font-weight: bold;
   color: black;
+  background-color: white;
+  border: 5px solid black;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px gray;
 }
-section .table td a:hover{
-  text-decoration: none;
-  color: blue;
-  transition: all 0.5s ;
+#card3 {
+  border: 5px solid black;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px gray;
+  width: 94%;
 }
-
+#card3 .card{
+    padding: 0;
+    margin: 5px -10px;
+}
+#card3 .card-body{
+    color: blue;
+}

@@ -1,0 +1,26 @@
+.container h1{
+    text-transform: uppercase;
+    text-align: center;
+    color: brown;
+    margin: 20px 0px;
+}
+.container #email{
+    display: inline-block;
+    margin: 10px;
+    color: blue;
+}
+.container input{
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.container button{
+    font-weight: bold;
+    opacity: 0.8;
+}
+.row{
+    margin: 20px 0px;
+}
+.container p{
+    margin: 10px;
+    color: blue;
+}

@@ -1,0 +1,34 @@
+<section style="margin: 30px 0px;">
+    <div class="container">
+            <h1 style="text-align: center;text-transform: uppercase;"><i>Thông tin môn học</i></h1>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="../../assets/logos/{{LogoSubject}}" class="card-img-top" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <ul>
+                    <li>
+                        <h4 class="card-title"><span>Tên môn học:</span> {{NameSubject}}</h4>
+                    </li>
+                    <li>
+                        <h5 class="card-title"><span>Mã môn học:</span> {{IdSubject}}</h5>
+                    </li>
+                    <li>
+                        <h5 class="card-text"><span>Số lượng câu hỏi:</span> 1-100 câu</h5>
+                    </li>
+                    <li>
+                        <h5 class="card-text"><span>Thời gian làm bài:</span> Không giới hạn</h5>
+                    </li>
+                    <div class="btn-exam">
+                        <a class="btn btn-primary" (click)="goExam()">Start</a>
+                        <a class="btn btn-danger" routerLink='/'>Home</a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
